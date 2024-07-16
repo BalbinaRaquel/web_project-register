@@ -4,7 +4,6 @@ from datetime import date
 
 
 
-
 def salving_data(customer_name, birth_date, customer_type):
     if customer_name and birth_date <= date.today():
         st.session_state["Success"] = True
@@ -18,18 +17,56 @@ st.set_page_config(
     page_icon="🛒"
 )
 
-st.header("Customer Registration", divider='rainbow')
+st.header("Customer Registration &mdash; :star:",  divider='rainbow')
+
+# Calender adjustment
+
+date_today = date.today()
+date_min = date(1960, 1, 1)
+date_max = date_today
 
 
-customer_name = st.text_input("Enter with the customer's name:",
+customer_name = st.text_input("Enter with your name:",
+                            placeholder="Type your name...",
                             key="customer_name")
 
-birth_date = st.date_input("Date of birth:", format="DD/MM/YYYY",
-                           key="customer_birth")
+
+birth_date = st.date_input("What's your date of birth:",
+                            date_max, date_min,
+                            format="MM/DD/YYYY",
+                            key="customer_birth")
+
 
 customer_type = st.selectbox("Customer type:", 
                              ["Natural person", "Legal person"],
                               index=None)
+
+
+contact_option = st.selectbox("How would you like to be contacted?",
+                            ("Email", "Home phone", "Mobile phone"),
+                            index=None,
+                            placeholder="Select contact method...",
+                            key="contact_option")
+
+st.write("You selected:", contact_option)
+
+
+customer_email = st.text_input("Enter with your E-mail:",
+                               value=None, 
+                               placeholder="Type a valid E-mail...",
+                               key="customer_email")
+
+customer_homephone = st.number_input("Enter with your Home phone:",
+                                     value=None, 
+                                     placeholder="Type a phone number...",
+                                     key="home_phone"
+                                    )
+
+customer_mobilephone = st.number_input("Enter with your Mobile phone:",
+                                     value=None, 
+                                     placeholder="Type a phone number...",
+                                     key="mobile_phone"
+                                    )
 
 btn_register = st.button('Register customer',
                          on_click=salving_data,

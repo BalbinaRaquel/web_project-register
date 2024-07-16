@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "web-register"
+version = "0.1.0"
+description = "Uma aplicação básica  para cadastrar dados de usuários"
+authors = ["Balbina Raquel Correia <balbina.rakell@outlook.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+streamlit = "^1.36.0"
+pandas = "^2.2.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

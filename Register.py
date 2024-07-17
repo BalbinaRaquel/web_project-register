@@ -50,7 +50,7 @@ contact_option = st.selectbox("How would you like to be contacted?",
                             placeholder="Select contact method...",
                             key="contact_option")
 
-st.write("You selected:", contact_option)
+st.write(f"You selected: :green[{contact_option}]")
 
 
 customer_email = st.text_input("Enter with your E-mail:",

@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "web-register"
 version = "0.1.0"
-description = "Uma aplicação básica  para cadastrar dados de usuários"
+description = "A simplistic web application for registering customer data"
 authors = ["Balbina Raquel Correia <balbina.rakell@outlook.com>"]
 readme = "README.md"
 

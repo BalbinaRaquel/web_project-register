@@ -4,8 +4,10 @@ from datetime import date
 
 
 
-def salving_data(customer_name, birth_date, customer_type):
+def salving_data(customer_name, birth_date, customer_type, contact_option, customer_email, customer_homephone, customer_mobilephone):
     if customer_name and birth_date <= date.today():
+        with open("customers.csv", "a", encoding="utf-8") as file:
+            file.write(f"{customer_name}, {birth_date}, {customer_type}, {contact_option}, {customer_email}, {customer_homephone}, {customer_mobilephone}\n") 
         st.session_state["Success"] = True
     else:
         st.session_state["Success"] = False
@@ -70,7 +72,9 @@ customer_mobilephone = st.number_input("Enter with your Mobile phone:",
 
 btn_register = st.button('Register customer',
                          on_click=salving_data,
-                         args=[customer_name, birth_date, customer_type])
+                         args=[customer_name, birth_date, customer_type, 
+                               contact_option, customer_email, 
+                               customer_homephone, customer_mobilephone])
 
 
 if btn_register:
@@ -79,7 +83,9 @@ if btn_register:
                    icon="✔")
     else:
         st.error(" There was an error in the registration!",
-                 icon="❌")    
+                 icon="❌") 
+        st.warning(" Try again!",
+                 icon="⚠")    
 
                                             
 

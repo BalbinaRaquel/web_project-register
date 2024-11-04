@@ -22,11 +22,25 @@ Código em Python, com utilização de Poetry para gestão de ambiente virtual .
 - Pandas
 - Streamlit
 
+
+###
+
+<div align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg" height="40" alt="visualstudio logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="40" alt="python logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/anaconda/anaconda-original.svg" height="40" alt="anaconda logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" height="40" alt="pandas logo"  />
+</div>
+
+
+
 ## Implantação em produção
 
 - Back end: Python/Poetry/Streamlit
 - Front end web: Streamlit.io [Customer Registration](https://webproject-customer-register-balbina-rakell.streamlit.app/)
-
 
 
 ## Layout  Customer Registration
@@ -55,6 +69,11 @@ git clone https://github.com/BalbinaRaquel/web_project-register.git
 https://webproject-customer-register-balbina-rakell.streamlit.app/)
 
 ```
+
+# Autor
+ 
+[Balbina Raquel Correia](https://github.com/BalbinaRaquel/balbinaraquelcorreia)
+
 
 ###
 
